@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Garage Door -->
+  <rect x="30" y="60" width="140" height="120" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+  
+  <!-- Garage Door Panels -->
+  <line x1="30" y1="90" x2="170" y2="90" stroke="#654321" stroke-width="2"/>
+  <line x1="30" y1="120" x2="170" y2="120" stroke="#654321" stroke-width="2"/>
+  <line x1="30" y1="150" x2="170" y2="150" stroke="#654321" stroke-width="2"/>
+  
+  <!-- Garage Door Handle -->
+  <circle cx="100" cy="135" r="8" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+  
+  <!-- Roof -->
+  <polygon points="100,20 20,60 180,60" fill="#A52A2A" stroke="#8B0000" stroke-width="3"/>
+  
+  <!-- Windows on top of garage -->
+  <rect x="60" y="35" width="25" height="20" fill="#87CEEB" stroke="#4682B4" stroke-width="2"/>
+  <rect x="115" y="35" width="25" height="20" fill="#87CEEB" stroke="#4682B4" stroke-width="2"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="180" width="200" height="20" fill="#708090"/>
+</svg>

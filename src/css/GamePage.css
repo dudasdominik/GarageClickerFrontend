@@ -1,0 +1,247 @@
+.game-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.game-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.player-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.player-info p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.logout-btn {
+  padding: 10px 25px;
+  background: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+.save-btn {
+  padding: 10px 25px;
+  background: #a2e682;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background: #56e115;
+}
+
+.game-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.clicker-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clicker-wrapper {
+  cursor: pointer;
+  transition: transform 0.1s;
+  user-select: none;
+}
+
+.clicker-wrapper:active {
+  transform: scale(0.95);
+}
+
+.clicker-image {
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.click-hint {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.shop-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.shop-section h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.item-card.unavailable {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.item-card.unavailable:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.item-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+}
+
+.item-effect {
+  color: #a7f3d0;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.item-cost {
+  color: #fbbf24;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.item-type {
+  color: #c4b5fd;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.item-quantity {
+  color: #60a5fa;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.not-enough-credits {
+  margin-top: 10px;
+  padding: 5px;
+  background: rgba(231, 76, 60, 0.5);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 2rem;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Scrollbar styling */
+.shop-section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.shop-section::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.shop-section::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.shop-section::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1024px) {
+  .game-content {
+    grid-template-columns: 1fr;
+  }
+
+  .player-info {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
